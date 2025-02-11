@@ -1,0 +1,246 @@
+/* 
+body {
+  font-family: 'Arial', sans-serif;
+  background: white;
+  margin: 0;
+  padding: 20px;
+}
+
+
+h2 {
+  text-align: center;
+  color: #2E7D32;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.btndiv {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: none;
+  border: 2px solid #2E7D32;
+  color: #2E7D32;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.add-btn:hover {
+  background: #2E7D32;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #2E7D32;
+  color: white;
+  font-weight: bold;
+}
+
+td img {
+  border-radius: 5px;
+}
+
+.update-btn, .delete-btn {
+  background: none;
+  border: 2px solid;
+  color: #2E7D32;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.update-btn {
+  border-color: #FFC107;
+  color: #FFC107;
+}
+
+.update-btn:hover {
+  background: #FFC107;
+  color: white;
+}
+
+.delete-btn {
+  border-color: #D32F2F;
+  color: #D32F2F;
+}
+
+.delete-btn:hover {
+  background: #D32F2F;
+  color: white;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+} */
+
+/* General Styling */
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  color: #2E7D32;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Button Section */
+.btndiv {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.add-btn {
+  background: white;
+  color: #2E7D32;
+  border: 2px solid #2E7D32;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #2E7D32;
+  color: white;
+}
+
+/* Product Cards Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Individual Product Card */
+.product-card {
+  background: white;
+  width: 280px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Image */
+.product-img-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+/* Product Info */
+.product-info {
+  color: #444;
+}
+
+.product-name {
+  font-size: 18px;
+  color: #2E7D32;
+  margin: 10px 0;
+}
+
+.product-price,
+.product-category,
+.product-id {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Action Buttons */
+.product-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 10px 15px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.update-btn {
+  background: #FFC107;
+  color: black;
+}
+
+.update-btn:hover {
+  background: #E6A800;
+}
+
+.delete-btn {
+  background: #D32F2F;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #B71C1C;
+}
+
+/* No Products Message */
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

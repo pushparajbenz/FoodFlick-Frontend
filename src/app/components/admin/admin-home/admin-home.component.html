@@ -1,0 +1,73 @@
+<!-- <h2>Admin Dashboard - Products</h2>
+
+
+ <div class="btndiv">
+  <button class="add-btn" (click)="navigateToAddProduct()">Add Product</button>
+  <button class="add-btn" (click)="navigateToUserDetails()">User Details</button>
+  <button class="add-btn" (click)="navigateToRevenue()">Revenue</button>
+ </div>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.productId || 'ID MISSING'}}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.category }}</td>
+      <td>
+        <img *ngIf="product.imageData" [src]="'data:' + product.imageType + ';base64,' + product.imageData" alt="Product Image" width="50" height="50" />
+      </td>
+      <td>
+        <button class="update-btn" (click)="updateProduct(product.productId)">Update</button>
+        <button class="delete-btn" (click)="deleteProduct(product.productId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p *ngIf="products.length === 0">No products available.</p> -->
+
+<h2 class="title">Admin Dashboard - Products</h2>
+
+<!-- Button Section -->
+<div class="btndiv">
+  <button class="add-btn" (click)="navigateToAddProduct()">Add Product</button>
+  <button class="add-btn" (click)="navigateToUserDetails()">User Details</button>
+  <button class="add-btn" (click)="navigateToRevenue()">Revenue</button>
+</div>
+
+<!-- Product Cards Grid -->
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="product-img-container">
+      <img *ngIf="product.imageData" [src]="'data:' + product.imageType + ';base64,' + product.imageData" alt="Product Image" class="product-img" />
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-price">Price: ₹{{ product.price }}</p>
+      <p class="product-category">Category: {{ product.category }}</p>
+      <p class="product-id">Product ID: {{ product.productId || 'ID MISSING'}}</p>
+    </div>
+    <div class="product-actions">
+      <button class="update-btn" (click)="updateProduct(product.productId)">Update</button>
+      <button class="delete-btn" (click)="deleteProduct(product.productId)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- Message if no products exist -->
+<p *ngIf="products.length === 0">No products available.</p>
+

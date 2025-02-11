@@ -1,0 +1,23 @@
+<div class="cart-container">
+    <h2>Shopping Cart</h2>
+    <div *ngIf="cartItems.length === 0">Your cart is empty.</div>
+    <div *ngFor="let item of cartItems" class="cart-item">
+    <img [src]="'data:image/png;base64,' + item.product.imageData" alt="Product Image" class="cart-image">
+    <div class="cart-details">
+    <h4>{{ item.product.name }}</h4>
+    <p>Price: ₹{{ item.product.price }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+    <button (click)="deleteCartItem(item.cartId)">Remove</button>
+    </div>
+    </div>
+    <button (click)="addMoreItems()" class="add-more-btn">Add More Items</button>
+    <button (click)="placeOrder()" class="order-btn">Order Now</button>
+    <!-- Order Confirmation Popup -->
+     <div class="order-popup" *ngIf="showPopup">
+      <div class="popup-content">
+        <div class="tick-mark">✔</div>
+        <h3>Order Placed Successfully!</h3>
+        <button class="ok-btn" (click)="navigateToOrders()">OK</button>
+      </div>
+    </div>
+  </div>

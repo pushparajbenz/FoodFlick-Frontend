@@ -1,0 +1,90 @@
+/* General Styling */
+.revenue-container {
+  background: white;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h2 {
+  color: #2E7D32;
+  margin-bottom: 20px;
+}
+
+/* Date Picker Section */
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.date-picker label {
+  font-weight: bold;
+  color: #444;
+}
+
+.date-picker input {
+  width: 80%;
+  padding: 8px;
+  border: 2px solid #2E7D32;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.date-picker input:focus {
+  border-color: #1B5E20;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+/* Fetch Revenue Button */
+.date-picker button {
+  background: white;
+  color: #2E7D32;
+  border: 2px solid #2E7D32;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.date-picker button:hover {
+  background: #2E7D32;
+  color: white;
+}
+
+/* Error Message */
+.error-message {
+  color: #D32F2F;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Revenue Data Section */
+.revenue-data {
+  margin-top: 20px;
+  padding: 15px;
+  background: #F1F8E9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.revenue-data h3 {
+  color: #2E7D32;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.revenue-data p {
+  font-size: 16px;
+  color: #444;
+  margin: 5px 0;
+  font-weight: bold;
+}

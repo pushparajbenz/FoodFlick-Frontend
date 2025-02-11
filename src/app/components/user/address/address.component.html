@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <h2 class="text-center">Manage Your Addresses</h2>
+     
+      <!-- Address Form -->
+    <form [formGroup]="addressForm" (ngSubmit)="addAddress()" class="address-form">
+    <div class="mb-3">
+    <label for="street" class="form-label">Street</label>
+    <input type="text" id="street" class="form-control" formControlName="street" placeholder="Enter street">
+    </div>
+     
+        <div class="mb-3">
+    <label for="city" class="form-label">City</label>
+    <input type="text" id="city" class="form-control" formControlName="city" placeholder="Enter city">
+    </div>
+     
+        <div class="mb-3">
+    <label for="state" class="form-label">State</label>
+    <input type="text" id="state" class="form-control" formControlName="state" placeholder="Enter state">
+    </div>
+     
+        <div class="mb-3">
+    <label for="zipCode" class="form-label">Zip Code</label>
+    <input type="text" id="zipCode" class="form-control" formControlName="zipCode" placeholder="Enter zip code">
+    </div>
+     
+        <button type="submit" class="btn btn-success w-100">Add Address</button>
+    </form>
+     
+      <!-- Address List -->
+    <div class="address-list mt-4">
+    <h4>Saved Addresses</h4>
+    <div *ngFor="let address of addresses" class="address-card">
+    <p><strong>Street:</strong> {{ address.street }}</p>
+    <p><strong>City:</strong> {{ address.city }}</p>
+    <p><strong>State:</strong> {{ address.state }}</p>
+    <p><strong>Zip Code:</strong> {{ address.zipCode }}</p>
+    <!-- <button class="btn btn-danger btn-sm" (click)="deleteAddress(address.addressId)">Delete</button> -->
+    </div>
+    </div>
+    </div>

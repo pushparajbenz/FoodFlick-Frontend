@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">Food Cart</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" *ngIf="!isLoggedIn()">
+            <a class="nav-link" (click)="login()">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn()">
+            <a class="nav-link" (click)="signup()">Signup</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn() && getRole() === 'ADMIN'">
+            <a class="nav-link" routerLink="/admin-home">Admin Home</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn() && getRole() === 'USER'">
+            <button class="nav-link" (click)="userhome()">User Home</button>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn() && getRole() === 'USER'">
+            <button class="nav-link" (click)="profile()">Profile</button>
+          </li>
+
+        
+          <li class="nav-item" *ngIf="isLoggedIn()&& getRole() === 'USER'" >
+            <button class="nav-link" (click)="cart()">My Cart</button>
+
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn()">
+            <button class="btn btn-danger" (click)="logout()">Logout</button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

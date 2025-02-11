@@ -1,0 +1,21 @@
+<div class="revenue-container">
+    <h2>Monthly Revenue Report</h2>
+  
+    <div class="date-picker">
+      <label>From Date:</label>
+      <input type="date" [(ngModel)]="fromDate" required />
+  
+      <label>To Date:</label>
+      <input type="date" [(ngModel)]="toDate" required />
+      
+      <button (click)="fetchRevenue()">Get Revenue</button>
+    </div>
+  
+    <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+  
+    <div class="revenue-data" *ngIf="revenueData">
+      <h3>Revenue Details</h3>
+      <p><strong>Total Revenue:</strong>₹{{ revenueData.price }}</p>
+      <!-- <p><strong>Orders Processed:</strong> {{ revenueData.totalOrders }}</p> -->
+    </div>
+  </div>

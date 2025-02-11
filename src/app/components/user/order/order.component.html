@@ -1,0 +1,11 @@
+<div class="order-container">
+    <h2>Your Orders</h2>
+    <div *ngIf="orders.length === 0">No orders placed yet.</div>
+    <div *ngFor="let order of orders" class="order-card">
+    <h3>Order ID: {{ order.oid }}</h3>
+    <p>Address: {{ order.address }}</p>
+    <p>Total Price: ₹{{ order.price }}</p>
+    <p>Date: {{ order.calendarDate | date:'short' }}</p>
+    <!-- <button class="order-btn" (click)="placeOrder()">Place Order</button> -->
+    </div>
+     
