@@ -29,7 +29,5 @@ export const routes: Routes = [
    {path: 'order', component: OrderComponent},
    {path: 'profile',component: ProfileComponent},
    {path: 'revenue', component: RevenueComponent},
-
- 
-  { path: '**', redirectTo: '' }
+   { path: '**', redirectTo: '' }
 ];

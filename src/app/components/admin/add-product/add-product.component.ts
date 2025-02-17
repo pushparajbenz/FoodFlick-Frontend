@@ -56,13 +56,13 @@ export class AddProductComponent {
     // Append image
     formData.append('image', this.image);
    const headers = new HttpHeaders().set('Authorization',`Bearer ${token}`)
-    //this.http.post(`http://localhost:8086/product-rest/admin/product`, formData,{headers})
+   
     this.http.post(`http://localhost:8086/product-rest/admin/product`, formData,{
      headers: { Authorization: `Bearer ${token}` } // Keep the Authorization header
      }) .subscribe({
       next: () => {
         console.log("Product added successfully!");
-        this.router.navigate(['/']); // Redirect after success
+        this.router.navigate(['/admin-home']); // Redirect after success
       },
       error: (err) => {
         console.error("Error adding product:", err);

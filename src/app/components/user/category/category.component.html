@@ -1,17 +1,25 @@
-<div class="category-container">
-    <button (click)="fetchProductsByCategory('Vegetarian')">Vegetarian</button>
-    <button (click)="fetchProductsByCategory('Non-Vegetarian')">Non-Vegetarian</button>
-    <button (click)="fetchProductsByCategory('Starters')">Starters</button>
-    <button (click)="fetchProductsByCategory('Snacks & Juices')">Snacks & Juices</button>
+<div class="background-container">
+  <div class="category-container" [ngClass]="{'active': products.length > 0}">
+  <button (click)="fetchProductsByCategory('Vegetarian')">Vegetarian</button>
+  <button (click)="fetchProductsByCategory('Non-Vegetarian')">Non-Vegetarian</button>
+  <button (click)="fetchProductsByCategory('Starters')">Starters</button>
+  <button (click)="fetchProductsByCategory('Snacks & Juices')">Snacks & Juices</button>
   </div>
-  
+   
+      
+  <div class="product-list" *ngIf="products.length > 0">
   <div *ngFor="let product of products" class="product-card">
-    <img [src]="'data:image/jpeg;base64,' + product.imageData" alt="Product Image">
-    <h3>{{ product.name }}</h3>
-    <p>Price: ₹{{ product.price }}</p>
-    <div class="quantity-container">
-      <button (click)="decreaseQuantity(product.productId)">-</button>
-      <span>{{ quantities[product.productId] }}</span>
-      <button (click)="increaseQuantity(product.productId)">+</button></div>
-    <button (click)="addToCart(product)">Add to Cart</button>
+  <img [src]="'data:image/jpeg;base64,' + product.imageData" alt="Product Image">
+  <h3>{{ product.name }}</h3>
+  <p>Price: ₹{{ product.price }}</p>
+   
+  <div class="quantity-container">
+  <button (click)="decreaseQuantity(product.productId)">-</button>
+  <span>{{ quantities[product.productId] }}</span>
+  <button (click)="increaseQuantity(product.productId)">+</button>
+  </div>
+   
+   <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+  </div>
+  </div> 
   </div>

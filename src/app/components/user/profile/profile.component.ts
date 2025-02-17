@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { StorageService } from '@app/services/storage.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,14 +11,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ProfileComponent implements OnInit {
   userProfile: any = {};
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private storageService:StorageService) {}
 
   ngOnInit(): void {
     this.fetchUserProfile();
   }
 
   fetchUserProfile() {
-    const token = localStorage.getItem('auth-token'); // Get JWT token from local storage
+    const token= this.storageService.getToken(); // Get JWT token from local storage
     if (!token) {
       console.error('No token found, unable to fetch user profile');
       return;

@@ -115,6 +115,7 @@ export class CategoryComponent implements OnInit {
       });
       this.loadCartItems();
     this.router.navigate(['/cart']);
+    this.loadCartItems();
   }
 }
 

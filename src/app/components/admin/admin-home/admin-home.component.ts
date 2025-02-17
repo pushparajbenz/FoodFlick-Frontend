@@ -36,7 +36,7 @@ export class AdminHomeComponent implements OnInit {
       headers: { Authorization: `Bearer ${token}` },
     }).subscribe({
       next: (data) => {
-        console.log("Admin Products fetched:", data); // Debugging: Check API response
+        console.log("Admin Products fetched:", data); 
         this.products = data;
   
         // Ensure each product has a productId
@@ -58,8 +58,7 @@ export class AdminHomeComponent implements OnInit {
     if (!confirm('Are you sure you want to delete this product?')) return;
   
     const token = this.storageService.getToken();
-    this.http
-      .delete(`http://localhost:8086/product-rest/admin/deleteProduct/${productId}`, {
+    this.http.delete(`http://localhost:8086/product-rest/admin/deleteProduct/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
         responseType: 'text' // Specify that the response is a text
       })

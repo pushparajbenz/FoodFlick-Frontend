@@ -1,11 +1,72 @@
-<nav class="navbar">
-    <button routerLink="/category">Category</button>
-    <button routerLink="/address">Address</button>
-    <div class="right-nav">
-      <button routerLink="/cart">
-        <img src="assets/cart-icon.png" alt="Cart" class="cart-icon">
-      </button>
-      <!-- <button (click)="logout()">Logout</button> -->
-    </div>
-  </nav>
-  <router-outlet></router-outlet>
+<div class="user-home-container">
+        <!-- Hero Section -->
+        <section class="hero">
+        <div class="hero-text">
+        <h1>Welcome to FoodFlick!</h1>
+        <p>Delicious food delivered to your doorstep</p>
+        <div class="button-group">
+        <button routerLink="/category" class="explore-btn">Explore Menu</button>
+        <button routerLink="/address" class="address-btn">Manage Address</button>
+        </div>
+        </div>
+        <img src="assets/food-banner.png" alt="Delicious Food" class="hero-image">
+        </section>
+        <!-- Special Offers Section -->
+        <section class="offers">
+        <h2>Today's Special Offers</h2>
+        <div class="offer-cards">
+        <div class="offer-card">
+        <img src="assets/veg-offer.png" alt="Veg Offer" class="offer-image">
+        <h3>Flat 20% Off</h3>
+        <p>On all vegetarian dishes</p>
+        </div>
+        <div class="offer-card">
+        <img src="assets/snacks-offer.png" alt="Snacks Offer" class="offer-image">
+        <h3>Buy 1 Get 1 Free</h3>
+        <p>On all snacks & juices</p>
+        </div>
+        <div class="offer-card">
+        <img src="assets/free-delivery.png" alt="Free Delivery" class="offer-image">
+        <h3>Free Delivery</h3>
+        <p>On orders above ₹500</p>
+        </div>
+        </div>
+        </section>
+         
+            
+        <section class="why-choose">
+        <h2>Why Choose FoodFlick?</h2>
+        <div class="features">
+        <div class="feature-card">
+        <img src="assets/quality.png" alt="Quality Food" class="feature-icon">
+        <h3>Best Quality</h3>
+        <p>We ensure top-quality ingredients and hygienic food preparation.</p>
+        </div>
+        <div class="feature-card">
+        <img src="assets/fast-delivery.png" alt="Fast Delivery" class="feature-icon">
+        <h3>Fast Delivery</h3>
+        <p>Quick and safe delivery to your doorstep within 30 minutes.</p>
+        </div>
+        <div class="feature-card">
+        <img src="assets/customer-support.png" alt="24/7 Support" class="feature-icon">
+        <h3>24/7 Support</h3>
+        <p>Our team is available round the clock to assist you.</p>
+        </div>
+        </div>
+        </section>
+         
+          
+        <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p><img src="assets/email-icon.png" alt="Email"> support&#64;FoodFlick.com</p>
+        <p><img src="assets/phone-icon.png" alt="Phone"> +91 98765 43210</p>
+        <p><img src="assets/location-icon.png" alt="Location"> 123, Food Street, Bangalore</p>
+        </section>
+         
+          
+        <footer class="footer">
+        <p>© FoodFlick 17/02/2025</p>
+        </footer>
+        </div>
+        
+        

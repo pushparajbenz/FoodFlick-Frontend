@@ -1,4 +1,4 @@
-.cart-container {
+/* .cart-container {
   text-align: center;
   padding: 20px;
 }
@@ -74,4 +74,206 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+} */
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+   background: url('/assets/logo.png') no-repeat center center/cover; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cart-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  /* background: url('/assets/logo.png') no-repeat center center/cover;  */
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+
+.cart-container h2 {
+  font-size: 24px;
+  color: #2E7D32; /* Green Theme */
+  margin-bottom: 20px;
+}
+
+
+.cart-container div[ngIf] {
+  font-size: 18px;
+  color: #777;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+}
+
+/* Product Image */
+.cart-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Cart Details */
+.cart-details {
+  flex-grow: 1;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.cart-details h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cart-details p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Remove Button */
+.cart-details button {
+  background-color: #f44336; /* Red for remove */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cart-details button:hover {
+  background-color: #d32f2f;
+}
+
+/* Add More & Order Buttons */
+.add-more-btn, .order-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.add-more-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.order-btn {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+.add-more-btn:hover {
+  background-color: #388E3C; /* Darker Green */
+  transform: scale(1.05);
+}
+
+.order-btn:hover {
+  background-color: #e68900; /* Darker Orange */
+  transform: scale(1.05);
+}
+
+/* Item Removed Message Card */
+.item-removed-message {
+  
+  transform: translateX(-50%);
+  background-color: #2E7D32; /* Green */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+ text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.item-removed-message.show {
+  opacity: 1;
+}
+
+/* Tick Icon */
+.item-removed-message .tick-icon {
+  font-size: 20px;
+  /* margin-right: 8px; */
+}
+
+/* Order Popup */
+.order-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.order-popup .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tick Mark in Order Popup */
+.order-popup .tick-mark {
+  font-size: 30px;
+  color: #2E7D32;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* OK Button in Popup */
+.ok-btn {
+  background-color: #2E7D32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.ok-btn:hover {
+  background-color: #1B5E20;
+}
+.down-extra{
+  display: flex;
+  flex-direction: column;
 }

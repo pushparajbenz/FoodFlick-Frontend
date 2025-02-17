@@ -1,28 +1,121 @@
-.quantity-container {
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+   background: url('/assets/logo.png') no-repeat center center/cover; 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 10px 0;
-}
- 
-.quantity-container button {
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  border: none;
-  background-color: #ff6600;
-  color: white;
-  cursor: pointer;
-  margin: 0 5px;
-  border-radius: 50%;
-}
- 
-.quantity-container button:hover {
-  background-color: #ff4500;
-}
- 
-.quantity-container span {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 0 10px;
+  justify-content: center;
 }
 
+.category-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.category-container.active {
+  top: 20%;
+}
+
+.category-container button {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-container button:hover {
+  background: #21867a;
+}
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #264653;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+
+.quantity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.quantity-container button {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 18px;
+}
+
+.quantity-container button:hover {
+  background: #21867a;
+}
+
+
+.add-to-cart {
+  background: #e76f51;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #d64c3b;
+} 
+ 

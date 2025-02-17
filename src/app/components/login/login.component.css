@@ -12,8 +12,8 @@ body {
   /* Login Container */
   .login-container {
    
-    background: rgba(255, 255, 255, 0.2); /* Transparent effect */
-    backdrop-filter: blur(10px); /* Adds a soft blur effect */
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
     padding: 30px;
     border-radius: 15px;
     width: 350px;

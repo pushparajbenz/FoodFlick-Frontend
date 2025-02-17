@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { StorageService } from '@app/services/storage.service';
 
 @Component({
   selector: 'app-revenue',
@@ -16,7 +17,7 @@ export class RevenueComponent implements OnInit {
   revenueData: any = null;
   errorMessage: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private storageService:StorageService) {}
 
   ngOnInit(): void {}
 
@@ -27,7 +28,7 @@ export class RevenueComponent implements OnInit {
     }
     this.errorMessage = '';
 
-    const token = localStorage.getItem('auth-token'); // JWT Token from local storage
+    const token = this.storageService.getToken(); // JWT Token from local storage
     if (!token) {
       console.error('No token found, authentication required.');
       return;

@@ -36,8 +36,7 @@ export class UpdateProductComponent implements OnInit {
 
   fetchProductById(id: string) {
     const token = this.storageService.getToken();
-    this.http
-      .get<any>(`http://localhost:8086/product-rest/user/fetch/${id}`, {
+    this.http.get<any>(`http://localhost:8086/product-rest/user/fetch/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .subscribe({
@@ -51,23 +50,7 @@ export class UpdateProductComponent implements OnInit {
       });
   }
 
-  // updateProduct() {
-  //   const token = this.storageService.getToken();
-  //   this.http
-  //     .put(`http://localhost:8086/product-rest/admin/product/${this.product.productId}`, this.product, {
-  //       headers: { Authorization: `Bearer ${token}` },
-  //     })
-  //     .subscribe({
-  //       next: () => {
-  //         alert('Product updated successfully!');
-  //         this.router.navigate(['/admin-home']);
-  //       },
-  //       error: (err) => {
-  //         console.error('Error updating product:', err);
-  //         alert('Failed to update product.');
-  //       },
-  //     });
-  // }
+ 
   updateProduct() {
     const token = this.storageService.getToken();
     this.http
